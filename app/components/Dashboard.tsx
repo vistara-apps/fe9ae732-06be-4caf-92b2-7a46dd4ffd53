@@ -110,7 +110,7 @@ export function Dashboard() {
               <div className="w-5 h-5 bg-purple-500 rounded mr-2"></div>
               <span className="text-white text-sm">Mint Token</span>
             </div>
-            <span className="text-white">></span>
+            <span className="text-white">&gt;</span>
           </div>
         </div>
       </motion.div>

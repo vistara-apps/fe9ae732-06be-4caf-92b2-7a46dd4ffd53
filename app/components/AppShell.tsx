@@ -2,7 +2,7 @@
 
 import { ReactNode } from 'react';
 import { ConnectWallet } from '@coinbase/onchainkit/wallet';
-import { Identity } from '@coinbase/onchainkit/identity';
+import { Identity, Avatar, Name, Address } from '@coinbase/onchainkit/identity';
 import { useAccount } from 'wagmi';
 import { Box, Clock, Shield } from 'lucide-react';
 
@@ -33,7 +33,11 @@ export function AppShell({ children }: AppShellProps) {
 
           <div className="flex items-center space-x-4">
             {isConnected && address && (
-              <Identity address={address as `0x${string}`} />
+              <Identity address={address as `0x${string}`}>
+                <Avatar />
+                <Name />
+                <Address />
+              </Identity>
             )}
             <ConnectWallet />
           </div>
